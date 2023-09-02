@@ -30,6 +30,9 @@ connection.once('open', () => {
 
 
 
+const userRouter = require("../Backend/Routes/Users");
+app.use("/user", userRouter);
+
 app.listen(PORT, () => {
     console.log(`Server is up and running on port number : ${PORT}`);
 });
